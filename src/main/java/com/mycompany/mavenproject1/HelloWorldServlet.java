@@ -21,12 +21,12 @@ public class HelloWorldServlet extends HttpServlet {
         resp.setHeader("Content-Type", "application/json");
 //      resp.getWriter().print("{\"message\": \"hello, world!\"}");
        
-        OpenWeatherMap owm = new OpenWeatherMap("de070c2e5eb7701442dae3c7a2d49a1e");
+        OpenWeatherMap owm = new OpenWeatherMap("");
 
         // getting current weather data for the "London" city
         CurrentWeather cwd = owm.currentWeatherByCityName("Bochum");
        
-//      json Object
+        //json Object
         JSONObject json = new JSONObject();
         
         json.put("City", cwd.getCityName());
